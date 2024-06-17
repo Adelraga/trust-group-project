@@ -38,7 +38,7 @@ class ContactSection extends StatelessWidget {
               ],
             ),
           ),
-          verticalSpace(30),
+          verticalSpace(29),
           Text(
             ": للتواصل معانا ",
             style: TextStyles.font20BlackBold,
