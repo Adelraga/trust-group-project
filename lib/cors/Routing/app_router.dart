@@ -4,7 +4,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
 import 'package:trust_group_project/cors/Routing/routes.dart';
-import 'package:trust_group_project/features/view/splash_view.dart';
+import 'package:trust_group_project/features/splash/view/splash_view.dart';
+
+import '../../features/home/presentation/view/home_view.dart';
+import '../../features/on_boarging/on_boarding.dart';
+import '../../features/our-services/presentation/view/our_services_view.dart';
 
 
 
@@ -16,8 +20,16 @@ abstract class AppRouter {
       builder: (context, state) =>  const SplashView(),
     ),
     GoRoute(
+      path: Routes.onBoardingScreen,
+      builder: (context, state) => const OnBoarding(),
+    ),
+    GoRoute(
       path: Routes.homeScreen,
-      builder: (context, state) =>Placeholder(),
+      builder: (context, state) =>HomeView(),
+    ),
+    GoRoute(
+      path: Routes.OurServicesView,
+      builder: (context, state) =>OurServicesView(),
     ),
     // GoRoute(
     //   path: Routes.characterDetails,

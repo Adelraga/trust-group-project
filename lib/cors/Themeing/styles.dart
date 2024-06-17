@@ -2,86 +2,40 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:trust_group_project/cors/Themeing/colors.dart';
 
-abstract class Styles {
-  static TextStyle font24Black700Weight = TextStyle(
-    fontSize: 24.sp,
-    fontWeight: FontWeight.w700,
+abstract class TextStyles {
+  static TextStyle font20BlackBold = TextStyle(
+    fontSize: 20.sp,
+    fontFamily: 'Cairo',
+    fontWeight: FontWeight.bold,
     color: Colors.black,
   );
-
-  static TextStyle font22Black700Weight = TextStyle(
-    fontSize: 22.sp,
+  static TextStyle font18Text_input_grayBold = TextStyle(
+    fontSize: 18.sp,
+    fontFamily: 'Cairo',
     fontWeight: FontWeight.bold,
-    color: Color.fromARGB(255, 0, 91, 228),
+    color: ColorsManager.Text_input_gray,
   );
-
-  static TextStyle font32BlueBold = TextStyle(
-    fontSize: 32.sp,
+  static TextStyle font50WhiteBold = TextStyle(
+    fontSize: 50.sp,
     fontWeight: FontWeight.bold,
-    color: ColorsManager.primaryColor,
+    color: Colors.white,
+    fontFamily: 'Cairo',
   );
+  static TextStyle font20Text_input_grayBold = TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.bold,
+      fontFamily: 'Cairo',
+      color: ColorsManager.Text_input_gray);
 
-  static TextStyle font40Weight700 = TextStyle(
-    color: Color(0xFF247CFF),
-    fontSize: 38,
-    fontWeight: FontWeight.bold,
-  );
+  static TextStyle font22BlackBold = TextStyle(
+      fontSize: 22,
+      fontWeight: FontWeight.bold,
+      fontFamily: 'Cairo',
+      color: Colors.black);
 
-  static TextStyle font15Weight400 = TextStyle(
-    color: Color(0xFF757575),
-    fontSize: 15,
-    fontWeight: FontWeight.w400,
-  );
-
-  static const textStyle18 = TextStyle(
-    fontSize: 16,
-    fontWeight: FontWeight.w600,
-  );
-
-  static const font24blue700weight = TextStyle(
-    fontSize: 24,
-    color: ColorsManager.primaryColor,
-    fontWeight: FontWeight.w700,
-  );
-
-  static const font12Gray400weight = TextStyle(
-    color: Color(0xFF9E9E9E),
-    fontSize: 15,
-    fontWeight: FontWeight.w400,
-  );
-
-  static const font12black24bold = TextStyle(
-    color: Color.fromARGB(255, 0, 68, 169),
-    fontSize: 15,
-    fontWeight: FontWeight.bold,
-  );
-
-  static const font13black24bold = TextStyle(
-    color: ColorsManager.categorySubTitle,
-    fontSize: 13,
-    fontWeight: FontWeight.bold,
-  );
-
-  static const font13blackbold = TextStyle(
-    color: ColorsManager.categoryTitle, 
-    fontSize: 13,
-    fontWeight: FontWeight.bold,
-  );
-
-  static const font15black24bold = TextStyle(
-    color: Color.fromARGB(255, 117, 117, 117),
-    fontSize: 15,
-    fontWeight: FontWeight.bold,
-  );
-
-  static const font18black24bold = TextStyle(
-    color: Color.fromARGB(255, 117, 117, 117),
-    fontSize: 18,
-    fontWeight: FontWeight.bold,
-  );
-
-  static const font11blueDarkbold = TextStyle(
-      fontSize: 11,
-      color: Color.fromARGB(255, 0, 36, 65),
-      fontWeight: FontWeight.bold);
+  static TextStyle font18BlackBold = TextStyle(
+      fontSize: 18,
+      color: Colors.black,
+      fontWeight: FontWeight.bold,
+      fontFamily: "Cairo");
 }
