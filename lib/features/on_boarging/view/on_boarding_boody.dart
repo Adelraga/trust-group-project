@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:trust_group_project/cors/Themeing/styles.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../cors/Helpers/spacing.dart';
+import '../../../cors/Routing/routes.dart';
 import '../widget/Custom_Indicator.dart';
 import '../widget/PageViews.dart';
 import '../widget/onboarding_button.dart';
@@ -46,21 +48,21 @@ class _OnBoardingBoodyState extends State<OnBoardingBoody> {
                     : true,
                 child: TextButton(
                   onPressed: () {
-                    // context.pushReplacementNamed(RoutesApp.login);
+                    GoRouter.of(context).push(Routes.homeScreen);
                   },
                   child: Text("Skip", style: TextStyles.font18BlackBold),
                 ),
               )),
           verticalSpace(5),
           Positioned(
-              right: 125.w,
-              bottom: 80.h,
+              right: 120.w,
+              bottom: 100.h,
               child: OnBoardingButton(
                 pagecontroller: pagecontroller,
               )),
           verticalSpace(5),
           Positioned(
-            right: 110.w,
+            right: 130.w,
             bottom: 20.h,
             child: CustomDotsIndicator(
               onTap: (p0) {
