@@ -22,20 +22,33 @@ abstract class TextStyles {
     fontFamily: 'Cairo',
   );
   static TextStyle font20Text_input_grayBold = TextStyle(
-      fontSize: 20,
+      fontSize: 20.sp,
       fontWeight: FontWeight.bold,
       fontFamily: 'Cairo',
       color: ColorsManager.Text_input_gray);
 
   static TextStyle font22BlackBold = TextStyle(
-      fontSize: 22,
+      fontSize: 22.sp,
       fontWeight: FontWeight.bold,
       fontFamily: 'Cairo',
       color: Colors.black);
 
   static TextStyle font18BlackBold = TextStyle(
-      fontSize: 18,
+      fontSize: 18.sp,
       color: Colors.black,
       fontWeight: FontWeight.bold,
       fontFamily: "Cairo");
+
+  static TextStyle font25BlackBold = TextStyle(
+          fontSize: 25.sp,
+          fontWeight: FontWeight.bold,
+          fontFamily: 'Cairo',
+          color: Colors.black,
+        );
+  // static TextStyle font20BlackBold = TextStyle(
+  //         fontSize: 25.sp,
+  //         fontWeight: FontWeight.bold,
+  //         fontFamily: 'Cairo',
+  //         color: Colors.black,
+  //       );
 }
