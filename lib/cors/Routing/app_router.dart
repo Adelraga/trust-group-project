@@ -7,8 +7,10 @@ import 'package:trust_group_project/cors/Routing/routes.dart';
 import 'package:trust_group_project/features/splash/view/splash_view.dart';
 
 import '../../features/home/presentation/view/home_view.dart';
+import '../../features/karkastan/presentation/view/karkastan_view.dart';
 import '../../features/on_boarging/on_boarding.dart';
 import '../../features/our-services/presentation/view/our_services_view.dart';
+import '../../features/who_we_are/presentation/view/who_we_are_view.dart';
 
 
 
@@ -30,6 +32,14 @@ abstract class AppRouter {
     GoRoute(
       path: Routes.OurServicesView,
       builder: (context, state) =>OurServicesView(),
+    ),
+    GoRoute(
+      path: Routes.WhoWeAreView,
+      builder: (context, state) =>WhoWeAreView(),
+    ),
+    GoRoute(
+      path: Routes.KarkastanView,
+      builder: (context, state) =>KarkastanView(),
     ),
     // GoRoute(
     //   path: Routes.characterDetails,

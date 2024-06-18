@@ -7,11 +7,13 @@ import 'package:trust_group_project/bloc_observe.dart';
 import 'package:trust_group_project/cors/DI/dependency_injection.dart';
 import 'package:trust_group_project/cors/Routing/app_router.dart';
 
+
 void main() async {
-  // await dotenv.load(fileName: "assets/.env");
   initGetIt();
   Bloc.observer = SimpleBlocObserver();
-  runApp(const MyApp());
+  runApp(
+    const MyApp(),
+  );
 }
 
 class MyApp extends StatefulWidget {

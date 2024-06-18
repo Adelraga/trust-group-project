@@ -31,17 +31,27 @@ class HomeGridView extends StatelessWidget {
               label: 'خدماتنا',
             ),
           ),
-          HomeGridItem(
-            imagePath: "assets/images/من نحن.png",
-            label: 'من نحن',
+          GestureDetector(
+            onTap: () {
+              GoRouter.of(context).push(Routes.WhoWeAreView);
+            },
+            child: HomeGridItem(
+              imagePath: "assets/images/من نحن.png",
+              label: 'من نحن',
+            ),
           ),
           HomeGridItem(
             imagePath: "assets/images/الدراسة في روسيا.png",
             label: 'الدراسة في روسيا',
           ),
-          HomeGridItem(
-            imagePath: "assets/images/الدراسة ف قرغيزستان.png",
-            label: 'الدراسة في قيرغيزستان',
+          GestureDetector(
+            onTap: () {
+              GoRouter.of(context).push(Routes.KarkastanView);
+            },
+            child: HomeGridItem(
+              imagePath: "assets/images/الدراسة ف قرغيزستان.png",
+              label: 'الدراسة في قيرغيزستان',
+            ),
           ),
           HomeGridItem(
             imagePath: "assets/images/تقييم.png",
