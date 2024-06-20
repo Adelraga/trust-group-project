@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:trust_group_project/bloc_observe.dart';
@@ -9,8 +10,13 @@ import 'package:trust_group_project/cors/Routing/app_router.dart';
 
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   initGetIt();
   Bloc.observer = SimpleBlocObserver();
+  await FlutterDownloader.initialize(
+    debug: true, // optional: set to false to disable printing logs to console (default: true)
+    // ignoreSsl: true // option: set to false to disable working with http links (default: false)
+  );
   runApp(
     const MyApp(),
   );

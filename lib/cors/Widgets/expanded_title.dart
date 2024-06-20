@@ -6,8 +6,12 @@ import '../Themeing/colors.dart';
 class ExpandedTitleItem extends StatelessWidget {
   final String title;
   final String description;
-  const ExpandedTitleItem(
-      {super.key, required this.title, required this.description});
+
+  const ExpandedTitleItem({
+    Key? key,
+    required this.title,
+    required this.description,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,14 +30,26 @@ class ExpandedTitleItem extends StatelessWidget {
       ),
       margin: EdgeInsets.only(top: 25),
       child: ExpansionTile(
-        title: Text(title, style: TextStyles.font22BlackBold),
+        trailing: SizedBox(
+            height: 30,
+            child: Image.asset(
+              "assets/images/icons8-question-mark-100.png",
+            )),
+        leading: Icon(Icons.expand_more), // Use the leading property
+        title: Text(
+          title,
+          textDirection: TextDirection.rtl,
+          style: TextStyles.font18Text_input_grayBold,
+        ),
         children: description != null
             ? [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text(description,
-                      textAlign: TextAlign.center,
-                      style: TextStyles.font20Text_input_grayBold),
+                  child: Text(
+                    description,
+                    textAlign: TextAlign.center,
+                    style: TextStyles.font18Text_input_grayBold,
+                  ),
                 )
               ]
             : [],
