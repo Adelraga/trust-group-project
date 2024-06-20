@@ -10,3 +10,18 @@ List<String> images = [
  "assets/images/image9.jpg",
  "assets/images/image10.jpg",
 ];
+
+List<String> videos = [
+ 'https://www.youtube.com/watch?v=NgIq19R-n5w&t=668s',
+ 'https://www.youtube.com/watch?v=NgIq19R-n5w&t=668s',
+ 'https://www.youtube.com/watch?v=NgIq19R-n5w&t=668s',
+ 'https://www.youtube.com/watch?v=NgIq19R-n5w&t=668s',
+ 'https://www.youtube.com/watch?v=NgIq19R-n5w&t=668s',
+ 'https://www.youtube.com/watch?v=NgIq19R-n5w&t=668s',
+ 'https://www.youtube.com/watch?v=NgIq19R-n5w&t=668s',
+ 'https://www.youtube.com/watch?v=NgIq19R-n5w&t=668s',
+ 'https://www.youtube.com/watch?v=NgIq19R-n5w&t=668s',
+ 'https://www.youtube.com/watch?v=NgIq19R-n5w&t=668s',
+ 'https://www.youtube.com/watch?v=NgIq19R-n5w&t=668s',
+
+];

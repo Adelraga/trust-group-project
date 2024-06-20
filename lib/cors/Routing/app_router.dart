@@ -10,6 +10,7 @@ import '../../features/home/presentation/view/home_view.dart';
 import '../../features/karkastan/presentation/view/karkastan_view.dart';
 import '../../features/on_boarging/on_boarding.dart';
 import '../../features/our-services/presentation/view/our_services_view.dart';
+import '../../features/russain/prsentation/view/russain_view.dart';
 import '../../features/who_we_are/presentation/view/who_we_are_view.dart';
 
 
@@ -40,6 +41,10 @@ abstract class AppRouter {
     GoRoute(
       path: Routes.KarkastanView,
       builder: (context, state) =>KarkastanView(),
+    ),
+    GoRoute(
+      path: Routes.RussainView,
+      builder: (context, state) =>RussainView(),
     ),
     // GoRoute(
     //   path: Routes.characterDetails,
