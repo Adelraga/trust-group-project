@@ -5,9 +5,9 @@ import 'package:trust_group_project/cors/Themeing/styles.dart';
 
 class TitleWithDescriptionSection extends StatelessWidget {
   final String title;
-  final String description;
+  final String? description;
   const TitleWithDescriptionSection(
-      {super.key, required this.title, required this.description});
+      {super.key, required this.title, this.description});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class TitleWithDescriptionSection extends StatelessWidget {
       ),
       SizedBox(height: 20.h),
       Text(
-        description,
+        description ?? "",
         textDirection: TextDirection.rtl,
         style: TextStyles.font18Text_input_grayBold,
         textAlign: TextAlign.center,
