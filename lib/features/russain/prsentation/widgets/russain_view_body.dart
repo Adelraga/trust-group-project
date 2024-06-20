@@ -17,46 +17,70 @@ class RussainViewBody extends StatelessWidget {
           child: TopWaveImageContainer(),
         ),
         const SliverToBoxAdapter(
-          child: TitleWithDescriptionSection(
-              title: " لمعرفة اسعار الجامعات الروسية ؟"),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: TitleWithDescriptionSection(
+                title: " لمعرفة اسعار الجامعات الروسية ؟"),
+          ),
         ),
         SliverToBoxAdapter(
           child: SizedBox(
               height: 80,
-              child: CustomFileDownloader(
-                fileName: "Universities of Kyrgyzstan 2023-2024 Egypt.pdf",
-                filePath: "https://www.tutorialspoint.com/css/css_tutorial.pdf",
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: CustomFileDownloader(
+                  fileName: "Universities of Kyrgyzstan 2023-2024 Egypt.pdf",
+                  filePath:
+                      "https://www.tutorialspoint.com/css/css_tutorial.pdf",
+                ),
               )), // Removed `const` keyword
         ),
         const SliverToBoxAdapter(
-          child: TitleWithDescriptionSection(
-              title: " معلومات اضافيه عن التخصصات ؟"),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: TitleWithDescriptionSection(
+                title: " معلومات اضافيه عن التخصصات ؟"),
+          ),
         ),
         SliverToBoxAdapter(
           child: SizedBox(
               height: 80,
-              child: CustomFileDownloader(
-                fileName: "Universities of Kyrgyzstan 2023-2024 Egypt.pdf",
-                filePath: "https://www.tutorialspoint.com/css/css_tutorial.pdf",
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: CustomFileDownloader(
+                  fileName: "Universities of Kyrgyzstan 2023-2024 Egypt.pdf",
+                  filePath:
+                      "https://www.tutorialspoint.com/css/css_tutorial.pdf",
+                ),
               )), // Removed `const` keyword
         ),
         SliverToBoxAdapter(
           child: SizedBox(
               height: 80,
-              child: CustomFileDownloader(
-                fileName: "Universities of Kyrgyzstan 2023-2024 Egypt.pdf",
-                filePath: "https://www.tutorialspoint.com/css/css_tutorial.pdf",
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: CustomFileDownloader(
+                  fileName: "Universities of Kyrgyzstan 2023-2024 Egypt.pdf",
+                  filePath:
+                      "https://www.tutorialspoint.com/css/css_tutorial.pdf",
+                ),
               )), // Removed `const` keyword
         ),
         const SliverToBoxAdapter(
-          child:
-              TitleWithDescriptionSection(title: " للتسجيل عبر الرابط التالى"),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: TitleWithDescriptionSection(
+                title: " للتسجيل عبر الرابط التالى"),
+          ),
         ),
         const SliverToBoxAdapter(
           child: EnrollForm(),
         ),
         const SliverToBoxAdapter(
-          child: TitleWithDescriptionSection(title: " طلابنا"),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: TitleWithDescriptionSection(title: " طلابنا"),
+          ),
         ),
         SliverPadding(
           padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
