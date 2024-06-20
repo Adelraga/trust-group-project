@@ -1,9 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class ShowYoutubeVideo extends StatefulWidget {
-  const ShowYoutubeVideo({super.key});
+  final String videoUrl;
+  const ShowYoutubeVideo({Key? key, required this.videoUrl}) : super(key: key);
 
   @override
   State<ShowYoutubeVideo> createState() => _ShowYoutubeVideoState();
@@ -11,17 +11,15 @@ class ShowYoutubeVideo extends StatefulWidget {
 
 class _ShowYoutubeVideoState extends State<ShowYoutubeVideo> {
   late YoutubePlayerController _controller;
+
   @override
   void initState() {
     super.initState();
-    const videoUrl =
-        'https://www.youtube.com/watch?v=NgIq19R-n5w&t=668s'; // Replace with your video URL
     _controller = YoutubePlayerController(
-      initialVideoId: YoutubePlayer.convertUrlToId(videoUrl) ?? '',
+      initialVideoId: YoutubePlayer.convertUrlToId(widget.videoUrl) ?? '',
       flags: const YoutubePlayerFlags(
         autoPlay: false,
         enableCaption: true,
-
         mute: false,
       ),
     );
@@ -33,6 +31,7 @@ class _ShowYoutubeVideoState extends State<ShowYoutubeVideo> {
     super.dispose();
   }
 
+  @override
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(20),
@@ -40,12 +39,11 @@ class _ShowYoutubeVideoState extends State<ShowYoutubeVideo> {
         child: YoutubePlayer(
           controller: _controller,
           showVideoProgressIndicator: true,
- 
           progressIndicatorColor: Colors.amber,
           onReady: () {
             print('Player is ready.');
           },
-          onEnded: (metadata) {
+          onEnded: (metaData) {
             // Do something when video ends.
           },
         ),

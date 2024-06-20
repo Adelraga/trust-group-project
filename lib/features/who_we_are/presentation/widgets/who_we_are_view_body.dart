@@ -26,7 +26,7 @@ class WhoWeAreViewBody extends StatelessWidget {
             ),
           ),
           SliverToBoxAdapter(
-            child: ShowYoutubeVideo(),
+            child: ShowYoutubeVideo(videoUrl: 'https://www.youtube.com/watch?v=NgIq19R-n5w&t=668s',),
           ),
           SliverToBoxAdapter(
             child: TitleWithDescriptionSection(

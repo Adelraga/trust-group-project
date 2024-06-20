@@ -40,9 +40,14 @@ class HomeGridView extends StatelessWidget {
               label: 'من نحن',
             ),
           ),
-          HomeGridItem(
-            imagePath: "assets/images/الدراسة في روسيا.png",
-            label: 'الدراسة في روسيا',
+          GestureDetector(
+            onTap: () {
+              GoRouter.of(context).push(Routes.RussainView);
+            },
+            child: HomeGridItem(
+              imagePath: "assets/images/الدراسة في روسيا.png",
+              label: 'الدراسة في روسيا',
+            ),
           ),
           GestureDetector(
             onTap: () {
