@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton(
@@ -29,11 +29,15 @@ class CustomButton extends StatelessWidget {
           style: TextButton.styleFrom(
             backgroundColor: buttonColor,
             shape: RoundedRectangleBorder(
-              borderRadius: borderRadius ?? BorderRadius.circular(12),
+              borderRadius: borderRadius ?? BorderRadius.circular(25),
             ),
           ),
           child: Text(
             title,
+            style: TextStyle(
+              fontSize: 20.sp,
+              color: textColor,
+            ),
           ),
         ),
       ),

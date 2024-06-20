@@ -11,6 +11,7 @@ import '../../features/karkastan/presentation/view/karkastan_view.dart';
 import '../../features/learn_with_us/presentation/view/learn_with_us_view.dart';
 import '../../features/on_boarging/on_boarding.dart';
 import '../../features/our-services/presentation/view/our_services_view.dart';
+import '../../features/rating/presentation/view/rating_view.dart';
 import '../../features/russain/prsentation/view/russain_view.dart';
 import '../../features/who_we_are/presentation/view/who_we_are_view.dart';
 
@@ -50,6 +51,10 @@ abstract class AppRouter {
     GoRoute(
       path: Routes.LearnWithUsView,
       builder: (context, state) =>LearnWithUsView(),
+    ),
+    GoRoute(
+      path: Routes.RatingView,
+      builder: (context, state) =>RatingView(),
     ),
     // GoRoute(
     //   path: Routes.characterDetails,

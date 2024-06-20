@@ -6,7 +6,6 @@ import 'home_grid_item.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
-
 class HomeGridView extends StatelessWidget {
   const HomeGridView({super.key});
 
@@ -23,8 +22,7 @@ class HomeGridView extends StatelessWidget {
         [
           GestureDetector(
             onTap: () {
-                    GoRouter.of(context).push(Routes.OurServicesView);
-
+              GoRouter.of(context).push(Routes.OurServicesView);
             },
             child: HomeGridItem(
               imagePath: "assets/images/خدماتنا.png",
@@ -58,9 +56,14 @@ class HomeGridView extends StatelessWidget {
               label: 'الدراسة في قيرغيزستان',
             ),
           ),
-          HomeGridItem(
-            imagePath: "assets/images/تقييم.png",
-            label: 'تقييم',
+          GestureDetector(
+            onTap: () {
+              GoRouter.of(context).push(Routes.RatingView);
+            },
+            child: HomeGridItem(
+              imagePath: "assets/images/تقييم.png",
+              label: 'تقييم',
+            ),
           ),
           GestureDetector(
             onTap: () {
