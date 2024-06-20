@@ -16,7 +16,7 @@ class TitleWithDescriptionSection extends StatelessWidget {
       Text(
         title,
         textDirection: TextDirection.rtl,
-        style: TextStyles.font25BlackBold,
+        style: TextStyles.font20BlackBold,
         textAlign: TextAlign.center,
       ),
       SizedBox(height: 20.h),
