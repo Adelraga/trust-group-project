@@ -62,9 +62,14 @@ class HomeGridView extends StatelessWidget {
             imagePath: "assets/images/تقييم.png",
             label: 'تقييم',
           ),
-          HomeGridItem(
-            imagePath: "assets/images/تعلم معنا.png",
-            label: 'تعلم معنا',
+          GestureDetector(
+            onTap: () {
+              GoRouter.of(context).push(Routes.LearnWithUsView);
+            },
+            child: HomeGridItem(
+              imagePath: "assets/images/تعلم معنا.png",
+              label: 'تعلم معنا',
+            ),
           ),
         ],
       ),
