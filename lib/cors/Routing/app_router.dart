@@ -8,6 +8,7 @@ import 'package:trust_group_project/features/splash/view/splash_view.dart';
 
 import '../../features/home/presentation/view/home_view.dart';
 import '../../features/karkastan/presentation/view/karkastan_view.dart';
+import '../../features/learn_with_us/presentation/view/learn_with_us_view.dart';
 import '../../features/on_boarging/on_boarding.dart';
 import '../../features/our-services/presentation/view/our_services_view.dart';
 import '../../features/russain/prsentation/view/russain_view.dart';
@@ -45,6 +46,10 @@ abstract class AppRouter {
     GoRoute(
       path: Routes.RussainView,
       builder: (context, state) =>RussainView(),
+    ),
+    GoRoute(
+      path: Routes.LearnWithUsView,
+      builder: (context, state) =>LearnWithUsView(),
     ),
     // GoRoute(
     //   path: Routes.characterDetails,
