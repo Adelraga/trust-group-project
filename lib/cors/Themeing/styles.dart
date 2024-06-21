@@ -17,6 +17,13 @@ abstract class TextStyles {
     fontWeight: FontWeight.bold,
     color: ColorsManager.Text_input_gray,
   );
+  static TextStyle font16Text_input_grayBold = TextStyle(
+    
+    fontSize: 16.sp,
+    fontFamily: 'Cairo',
+    fontWeight: FontWeight.bold,
+    color: ColorsManager.Text_input_gray,
+  );
   static TextStyle font50WhiteBold = TextStyle(
     fontSize: 50.sp,
     fontWeight: FontWeight.bold,

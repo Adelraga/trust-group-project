@@ -34,6 +34,7 @@ class PageViewItems extends StatelessWidget {
           Text(
             subTitle,
             textAlign: TextAlign.center,
+            textDirection: TextDirection.rtl,
             style: TextStyles.font20BlackBold,
           ),
         ],

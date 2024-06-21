@@ -39,7 +39,7 @@ class ExpandedTitleItem extends StatelessWidget {
         title: Text(
           title,
           textDirection: TextDirection.rtl,
-          style: TextStyles.font18Text_input_grayBold,
+          style: TextStyles.font18BlackBold,
         ),
         children: description != null
             ? [
@@ -48,7 +48,7 @@ class ExpandedTitleItem extends StatelessWidget {
                   child: Text(
                     description,
                     textAlign: TextAlign.center,
-                    style: TextStyles.font18Text_input_grayBold,
+                    style: TextStyles.font16Text_input_grayBold,
                   ),
                 )
               ]

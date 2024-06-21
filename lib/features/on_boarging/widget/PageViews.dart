@@ -15,12 +15,11 @@ class PageViewsApp extends StatelessWidget {
       controller: controller,
       children: const [
         PageViewItems(
-          image: 'assets/images/onboarding1.png',
-          subTitle: "Trust Group للخدمات الطلابية للدراسة في الخارج نقدم جميع الخدمات الدراسية في العديد من الدول"
-        ),
+            image: 'assets/images/onboarding1.png',
+            subTitle:
+                "شركة TRUST GROUP للخدمات الطلابية للدراسة في الخارج نقدم جميع الخدمات الدراسية في العديد من الدول"),
         PageViewItems(
           image: 'assets/images/onboarding2.png',
-
           subTitle:
               'ابدا رحلتك الان من خلالنا  وادرس في افضل الجامعات الحكومية و الخاصة بالخارج  ',
         ),
