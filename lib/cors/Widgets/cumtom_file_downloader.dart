@@ -101,8 +101,7 @@ class _CustomFileDownloaderState extends State<CustomFileDownloader> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: isPermission
-          ? Card(
+      child: Card(
               elevation: 10,
               shadowColor: Colors.grey.shade100,
               child: GestureDetector(
@@ -146,10 +145,7 @@ class _CustomFileDownloaderState extends State<CustomFileDownloader> {
                 ),
               ),
             )
-          : TextButton(
-              onPressed: checkPermission,
-              child: const Text("Permission issue"),
-            ),
+        
     );
   }
 }
