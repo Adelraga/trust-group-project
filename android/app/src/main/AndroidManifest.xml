@@ -2,7 +2,7 @@
 
     
     <application
-        android:label="trust_group_project"
+        android:label="Trust Group"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
