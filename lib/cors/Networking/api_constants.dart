@@ -1,6 +1,6 @@
 class ApiConstants {
-  static const String apiBaseUrl = "https://api.jikan.moe/v4/";
-  // static const String topRated = "top/anime";
+  static const String apiBaseUrl = "https://travel-backend-757u.vercel.app/";
+  static const String getAllServices = "services/getAllServices";
   // static const String category = "genres/anime";
   // static const String characters = "characters";
 }

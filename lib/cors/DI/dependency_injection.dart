@@ -1,19 +1,23 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:trust_group_project/cors/DI/dio_factory_logger.dart';
+import 'package:trust_group_project/features/our-services/data/repos/services_repo.dart';
+import 'package:trust_group_project/features/our-services/logic/cubit/services_cubit.dart';
+
+import '../Networking/api_service.dart';
 
 
 final getIt = GetIt.instance;
 void initGetIt() {
   Dio dio = DioFactory.getDio();
   // singleton is the used of method we take acopy of it many times so we make it one time and reused it  /// here a singleton for apiservice
-  // getIt.registerLazySingleton<ApiService>(() => ApiService(dio));
+  getIt.registerLazySingleton<ApiService>(() => ApiService(dio));
 
   // /// here a singleton for apiservice
 
-  // // TOP Rated
-  // getIt.registerLazySingleton<TopRatedCubit>(() => TopRatedCubit(getIt()));
-  // getIt.registerLazySingleton<MyRepo>(() => MyRepo(getIt()));
+  // Services Data
+  getIt.registerLazySingleton<ServicesCubit>(() => ServicesCubit(getIt()));
+  getIt.registerLazySingleton<ServicesRepo>(() => ServicesRepo(getIt()));
 
   // //categorylist
   // getIt.registerLazySingleton<CategoryListCubit>(
