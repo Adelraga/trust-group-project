@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
 import 'package:trust_group_project/cors/Routing/routes.dart';
+import 'package:trust_group_project/features/our-services/logic/cubit/services_cubit.dart';
 import 'package:trust_group_project/features/splash/view/splash_view.dart';
 
 import '../../features/home/presentation/view/home_view.dart';
@@ -13,7 +14,12 @@ import '../../features/on_boarging/on_boarding.dart';
 import '../../features/our-services/presentation/view/our_services_view.dart';
 import '../../features/rating/presentation/view/rating_view.dart';
 import '../../features/russain/prsentation/view/russain_view.dart';
+
 import '../../features/who_we_are/presentation/view/who_we_are_view.dart';
+
+import '../DI/dependency_injection.dart';
+
+
 
 
 
@@ -34,7 +40,10 @@ abstract class AppRouter {
     ),
     GoRoute(
       path: Routes.OurServicesView,
-      builder: (context, state) =>OurServicesView(),
+      builder: (context, state) =>BlocProvider(
+        create: (context) => getIt<ServicesCubit>()..getServicesData(),
+        child: OurServicesView(),
+      ),
     ),
     GoRoute(
       path: Routes.WhoWeAreView,
