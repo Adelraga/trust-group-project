@@ -8,6 +8,7 @@ import 'package:trust_group_project/features/our-services/logic/cubit/services_c
 import 'package:trust_group_project/features/splash/view/splash_view.dart';
 
 import '../../features/home/presentation/view/home_view.dart';
+import '../../features/karkastan/logic/show_karkastan_require_paper_cubit/show_karkastan_require_paper_cubit.dart';
 import '../../features/karkastan/presentation/view/karkastan_view.dart';
 import '../../features/learn_with_us/presentation/view/learn_with_us_view.dart';
 import '../../features/on_boarging/on_boarding.dart';
@@ -49,10 +50,19 @@ abstract class AppRouter {
       path: Routes.WhoWeAreView,
       builder: (context, state) =>WhoWeAreView(),
     ),
-    GoRoute(
-      path: Routes.KarkastanView,
-      builder: (context, state) =>KarkastanView(),
-    ),
+    
+  GoRoute(
+  path: Routes.KarkastanView,
+  builder: (context, state) => MultiBlocProvider(
+    providers: [
+      BlocProvider<ShowKarkastanRequirePaperCubit>(
+         create: (context) => getIt<ShowKarkastanRequirePaperCubit>()..getKarkastanRequirePaper(),
+      ),
+      // Add other Blocs here if needed
+    ],
+    child: KarkastanView(),
+  ),
+),
     GoRoute(
       path: Routes.RussainView,
       builder: (context, state) =>RussainView(),

@@ -40,6 +40,10 @@ class KarkastanViewBody extends StatelessWidget {
             child: CustomDivider(),
           ),
           const SliverToBoxAdapter(
+            child: TitleWithDescriptionSection(
+                title: "المستندات المطلوبة للتقديم للدراسة"),
+          ),
+          const SliverToBoxAdapter(
             child: CustomRequirePaperSection(),
           ),
           const SliverToBoxAdapter(
@@ -75,11 +79,10 @@ class KarkastanViewBody extends StatelessWidget {
             child: TitleWithDescriptionSection(
                 title: "الاسئله الاكثر شيوعا عن الدراسه في دوله قرغيزستتان? "),
           ),
-
           SliverPadding(
-          padding: const EdgeInsets.all(15),
-          sliver: KarkastanQuestionListView(),
-        ),
+            padding: const EdgeInsets.all(15),
+            sliver: KarkastanQuestionListView(),
+          ),
         ],
       ),
     );
