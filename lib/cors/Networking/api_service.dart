@@ -5,6 +5,8 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:trust_group_project/cors/Networking/api_constants.dart';
 import 'package:trust_group_project/features/our-services/data/models/services_model.dart';
+
+import '../../features/karkastan/data/models/karkastan_require_paper_model.dart';
 part 'api_service.g.dart';
 
 @RestApi(baseUrl: ApiConstants.apiBaseUrl) //BaseUrl
@@ -13,6 +15,9 @@ abstract class ApiService {
 
   @GET(ApiConstants.getAllServices) // the endpoint
   Future<List<ServicesModel>> getAllServices();
+
+  @GET(ApiConstants.showKarkastanRequirePaper) // the endpoint
+  Future<List<KarkastanRequirePaperModel>> ShowKarkastanRequirePaper();
   
   // @GET(ApiConstants.category) // the endpoint
   // Future<AnimeCategory> getAllCategory();
