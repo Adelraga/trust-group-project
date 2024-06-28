@@ -3,6 +3,7 @@ class ApiConstants {
   static const String getAllServices = "services/getAllServices";
   static const String showKarkastanRequirePaper = "documents/getAll";
   static const String whoWeAreStudentImage = "who-we-are/getAll";
+  static const String karkastanCommonQuestion = "common-quesions/getAll";
   // static const String category = "genres/anime";
   // static const String characters = "characters";
 }
