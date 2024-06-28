@@ -11,6 +11,10 @@ import 'package:trust_group_project/features/who_we_are/logic/cubit/student_imag
 import '../../features/karkastan/data/repos/karkastan_common_question_repo.dart';
 import '../../features/karkastan/data/repos/karkastan_require_paper_repo.dart';
 import '../../features/karkastan/logic/common_question_cubit/get_common_question_cubit.dart';
+import '../../features/russain/data/repos/get_pdfs_repo.dart';
+import '../../features/russain/logic/russain_cubit/get_russain_pdfs_cubit.dart';
+import '../../features/russain/logic/russain_iraq_cubit/russain_iraq_pdf_cubit.dart';
+import '../../features/russain/logic/technical_pdfs_cubit/technical_pdf_cubit.dart';
 import '../Networking/api_service.dart';
 
 
@@ -37,6 +41,12 @@ void initGetIt() {
   // Get karkastan common question
   getIt.registerLazySingleton<GetCommonQuestionCubit>(() => GetCommonQuestionCubit(getIt()));
   getIt.registerLazySingleton<KarkastanCommonQuestionRepo>(() => KarkastanCommonQuestionRepo(getIt()));
+ 
+  // Get russain pdfs
+  getIt.registerLazySingleton<GetRussainPdfsCubit>(() => GetRussainPdfsCubit(getIt()));
+  getIt.registerLazySingleton<TechnicalPdfCubit>(() => TechnicalPdfCubit(getIt()));
+  getIt.registerLazySingleton<RussainIraqPdfCubit>(() => RussainIraqPdfCubit(getIt()));
+  getIt.registerLazySingleton<GetPdfsRepo>(() => GetPdfsRepo(getIt()));
 
   // //categorylist
   // getIt.registerLazySingleton<CategoryListCubit>(
