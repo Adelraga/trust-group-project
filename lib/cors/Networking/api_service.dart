@@ -6,6 +6,7 @@ import 'package:retrofit/retrofit.dart';
 import 'package:trust_group_project/cors/Networking/api_constants.dart';
 import 'package:trust_group_project/features/our-services/data/models/services_model.dart';
 
+import '../../features/karkastan/data/models/karkastan_common_question_model.dart';
 import '../../features/karkastan/data/models/karkastan_require_paper_model.dart';
 import '../../features/who_we_are/data/models/student_images_model.dart';
 part 'api_service.g.dart';
@@ -22,6 +23,9 @@ abstract class ApiService {
 
   @GET(ApiConstants.whoWeAreStudentImage) // the endpoint
   Future<List<StudentImagesModel>> getStudentImages();
+
+  @GET(ApiConstants.karkastanCommonQuestion) // the endpoint
+  Future<List<KarkastanCommonQuestionModel>> getCommonQuestion();
   
   // @GET(ApiConstants.category) // the endpoint
   // Future<AnimeCategory> getAllCategory();
