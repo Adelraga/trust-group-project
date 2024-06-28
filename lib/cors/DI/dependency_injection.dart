@@ -4,6 +4,8 @@ import 'package:trust_group_project/cors/DI/dio_factory_logger.dart';
 import 'package:trust_group_project/features/karkastan/logic/show_karkastan_require_paper_cubit/show_karkastan_require_paper_cubit.dart';
 import 'package:trust_group_project/features/our-services/data/repos/services_repo.dart';
 import 'package:trust_group_project/features/our-services/logic/cubit/services_cubit.dart';
+import 'package:trust_group_project/features/who_we_are/data/repos/student_images_repo.dart';
+import 'package:trust_group_project/features/who_we_are/logic/cubit/student_images_cubit.dart';
 
 import '../../features/karkastan/data/repos/karkastan_require_paper_repo.dart';
 import '../Networking/api_service.dart';
@@ -24,6 +26,10 @@ void initGetIt() {
   // ShowKarkastanRequirePaper
   getIt.registerLazySingleton<ShowKarkastanRequirePaperCubit>(() => ShowKarkastanRequirePaperCubit(getIt()));
   getIt.registerLazySingleton<KarkastanRequirePaperRepo>(() => KarkastanRequirePaperRepo(getIt()));
+  
+  // Get student images in whoweare page
+  getIt.registerLazySingleton<StudentImagesCubit>(() => StudentImagesCubit(getIt()));
+  getIt.registerLazySingleton<StudentImagesRepo>(() => StudentImagesRepo(getIt()));
 
   // //categorylist
   // getIt.registerLazySingleton<CategoryListCubit>(

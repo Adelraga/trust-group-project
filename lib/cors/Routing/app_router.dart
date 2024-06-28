@@ -6,6 +6,8 @@ import 'package:go_router/go_router.dart';
 import 'package:trust_group_project/cors/Routing/routes.dart';
 import 'package:trust_group_project/features/our-services/logic/cubit/services_cubit.dart';
 import 'package:trust_group_project/features/splash/view/splash_view.dart';
+import 'package:trust_group_project/features/who_we_are/data/models/student_images_model.dart';
+import 'package:trust_group_project/features/who_we_are/logic/cubit/student_images_cubit.dart';
 
 import '../../features/home/presentation/view/home_view.dart';
 import '../../features/karkastan/logic/show_karkastan_require_paper_cubit/show_karkastan_require_paper_cubit.dart';
@@ -48,7 +50,10 @@ abstract class AppRouter {
     ),
     GoRoute(
       path: Routes.WhoWeAreView,
-      builder: (context, state) =>WhoWeAreView(),
+      builder: (context, state)=> BlocProvider(
+        create: (context) => getIt<StudentImagesCubit>()..getStudentImages(),
+        child: WhoWeAreView(),
+      ),
     ),
     
   GoRoute(

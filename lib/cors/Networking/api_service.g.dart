@@ -13,7 +13,7 @@ class _ApiService implements ApiService {
     this._dio, {
     this.baseUrl,
   }) {
-    baseUrl ??= 'https://travel-backend-757u.vercel.app/';
+    baseUrl ??= 'https://travel-backend-h1ol.vercel.app/';
   }
 
   final Dio _dio;
@@ -75,6 +75,36 @@ class _ApiService implements ApiService {
     var value = _result.data!
         .map((dynamic i) =>
             KarkastanRequirePaperModel.fromJson(i as Map<String, dynamic>))
+        .toList();
+    return value;
+  }
+
+  @override
+  Future<List<StudentImagesModel>> getStudentImages() async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
+    final _result = await _dio
+        .fetch<List<dynamic>>(_setStreamType<List<StudentImagesModel>>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              'who-we-are/getAll',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    var value = _result.data!
+        .map((dynamic i) =>
+            StudentImagesModel.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }
