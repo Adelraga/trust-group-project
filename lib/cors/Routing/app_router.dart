@@ -10,6 +10,7 @@ import 'package:trust_group_project/features/who_we_are/logic/cubit/student_imag
 
 import '../../features/home/presentation/view/home_view.dart';
 import '../../features/karkastan/logic/common_question_cubit/get_common_question_cubit.dart';
+import '../../features/karkastan/logic/karkastan_universities_prices_cubit/karkastan_universities_prices_cubit.dart';
 import '../../features/karkastan/logic/show_karkastan_require_paper_cubit/show_karkastan_require_paper_cubit.dart';
 import '../../features/karkastan/presentation/view/karkastan_view.dart';
 import '../../features/learn_with_us/presentation/view/learn_with_us_view.dart';
@@ -66,6 +67,10 @@ abstract class AppRouter {
           BlocProvider<GetCommonQuestionCubit>(
             create: (context) =>
                 getIt<GetCommonQuestionCubit>()..getCommonQuestion(),
+          ),
+          BlocProvider<KarkastanUniversitiesPricesCubit>(
+            create: (context) =>
+                getIt<KarkastanUniversitiesPricesCubit>()..getkarkastanUniversitiesPrices(),
           ),
           // Add other Blocs here if needed
         ],

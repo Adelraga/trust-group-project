@@ -4,6 +4,7 @@ class ApiConstants {
   static const String showKarkastanRequirePaper = "documents/getAll";
   static const String whoWeAreStudentImage = "who-we-are/getAll";
   static const String karkastanCommonQuestion = "common-quesions/getAll";
+  static const String karkastanUniversitiesPrices = "unversities-prices/get";
   static const String russainUniversity = "russain-university/get";
   static const String technicalUniversity = "technical-university/get";
   static const String russainUniversityIraq = "russian-unversity-iraq/get";

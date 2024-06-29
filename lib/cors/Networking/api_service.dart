@@ -37,6 +37,9 @@ abstract class ApiService {
 
   @GET(ApiConstants.russainUniversityIraq) // the endpoint
   Future<List<PdfsModel>> getRussainUniversityIraqPdf();
+  
+  @GET(ApiConstants.karkastanUniversitiesPrices) // the endpoint
+  Future<List<PdfsModel>> getkarkastanUniversitiesPrices();
 
   @GET(ApiConstants.russainYoutubeVideos) // the endpoint
   Future<List<YoutubeVideosModel>> getRussainYoutubeLinks();
