@@ -12,6 +12,11 @@ import '../../features/karkastan/data/repos/karkastan_common_question_repo.dart'
 import '../../features/karkastan/data/repos/karkastan_require_paper_repo.dart';
 import '../../features/karkastan/logic/common_question_cubit/get_common_question_cubit.dart';
 import '../../features/karkastan/logic/karkastan_universities_prices_cubit/karkastan_universities_prices_cubit.dart';
+import '../../features/learn_with_us/logic/advanced_cubit/learning_advanced_cubit.dart';
+import '../../features/learn_with_us/logic/begianer_cubit/learning_begainer_cubit.dart';
+import '../../features/learn_with_us/logic/meduim_cubit/learning_medium_cubit.dart';
+import '../../features/rating/data/repos/comments_repo.dart';
+import '../../features/rating/logic/comment_cubit/comments_cubit.dart';
 import '../../features/russain/data/repos/get_pdfs_repo.dart';
 import '../../features/russain/data/repos/get_youtube_videos_repo.dart';
 import '../../features/russain/logic/russain_cubit/get_russain_pdfs_cubit.dart';
@@ -67,8 +72,24 @@ void initGetIt() {
   // Get youtubelinks
   getIt.registerLazySingleton<YoutubeVideosLinksCubit>(
       () => YoutubeVideosLinksCubit(getIt()));
+  // LearningBegainerCubit
+  getIt.registerLazySingleton<LearningBegainerCubit>(
+      () => LearningBegainerCubit(getIt()));
+  // LearningMediumCubit
+  getIt.registerLazySingleton<LearningMediumCubit>(
+      () => LearningMediumCubit(getIt()));
+  // LearningAdvancedCubit
+  getIt.registerLazySingleton<LearningAdvancedCubit>(
+      () => LearningAdvancedCubit(getIt()));
+
   getIt.registerLazySingleton<GetYoutubeVideosRepo>(
       () => GetYoutubeVideosRepo(getIt()));
+
+
+  // CommentsCubit
+  getIt.registerLazySingleton<CommentsCubit>(() => CommentsCubit(getIt()));
+
+  getIt.registerLazySingleton<CommentsRepo>(() => CommentsRepo(getIt()));
 
   // //categorylist
   // getIt.registerLazySingleton<CategoryListCubit>(

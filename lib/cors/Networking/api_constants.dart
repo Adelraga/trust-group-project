@@ -9,6 +9,10 @@ class ApiConstants {
   static const String technicalUniversity = "technical-university/get";
   static const String russainUniversityIraq = "russian-unversity-iraq/get";
   static const String russainYoutubeVideos = "youtube-links/getAll";
+  static const String learningBegainerPdf = "russain-language-level1/get";
+  static const String learningMediumPdf = "most-important-100word/get";
+  static const String learningAdvancedPdf = "russian-book/get";
+  static const String Comments = "ratings/create";
   // static const String category = "genres/anime";
   // static const String characters = "characters";
 }
