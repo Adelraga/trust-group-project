@@ -9,6 +9,7 @@ import 'package:trust_group_project/features/russain/data/models/get_pdfs_model.
 
 import '../../features/karkastan/data/models/karkastan_common_question_model.dart';
 import '../../features/karkastan/data/models/karkastan_require_paper_model.dart';
+import '../../features/russain/data/models/get_youtube_videos_model.dart';
 import '../../features/who_we_are/data/models/student_images_model.dart';
 part 'api_service.g.dart';
 
@@ -36,6 +37,9 @@ abstract class ApiService {
 
   @GET(ApiConstants.russainUniversityIraq) // the endpoint
   Future<List<PdfsModel>> getRussainUniversityIraqPdf();
+
+  @GET(ApiConstants.russainYoutubeVideos) // the endpoint
+  Future<List<YoutubeVideosModel>> getRussainYoutubeLinks();
   
   // @GET(ApiConstants.category) // the endpoint
   // Future<AnimeCategory> getAllCategory();

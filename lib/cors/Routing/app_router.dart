@@ -19,6 +19,7 @@ import '../../features/rating/presentation/view/rating_view.dart';
 import '../../features/russain/logic/russain_cubit/get_russain_pdfs_cubit.dart';
 import '../../features/russain/logic/russain_iraq_cubit/russain_iraq_pdf_cubit.dart';
 import '../../features/russain/logic/technical_pdfs_cubit/technical_pdf_cubit.dart';
+import '../../features/russain/logic/youtube_videos_links_cubit/youtube_videos_links_cubit.dart';
 import '../../features/russain/prsentation/view/russain_view.dart';
 
 import '../../features/who_we_are/presentation/view/who_we_are_view.dart';
@@ -86,6 +87,10 @@ abstract class AppRouter {
           BlocProvider(
             create: (context) =>
                 getIt<RussainIraqPdfCubit>()..getRussainUniversityIraqPdf(),
+          ),
+          BlocProvider(
+            create: (context) =>
+                getIt<YoutubeVideosLinksCubit>()..getYoutubeVideosLinks(),
           ),
         ],
         child: RussainView(),

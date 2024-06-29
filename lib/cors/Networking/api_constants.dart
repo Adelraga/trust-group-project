@@ -7,6 +7,7 @@ class ApiConstants {
   static const String russainUniversity = "russain-university/get";
   static const String technicalUniversity = "technical-university/get";
   static const String russainUniversityIraq = "russian-unversity-iraq/get";
+  static const String russainYoutubeVideos = "youtube-links/getAll";
   // static const String category = "genres/anime";
   // static const String characters = "characters";
 }

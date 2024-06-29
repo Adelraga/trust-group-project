@@ -21,7 +21,10 @@ class _ShowYoutubeVideoState extends State<ShowYoutubeVideo> {
         autoPlay: false,
         enableCaption: true,
         mute: false,
-      ),
+        controlsVisibleAtStart :true
+
+
+    ),
     );
   }
 
