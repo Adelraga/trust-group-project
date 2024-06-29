@@ -5,9 +5,11 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:trust_group_project/cors/Networking/api_constants.dart';
 import 'package:trust_group_project/features/our-services/data/models/services_model.dart';
+import 'package:trust_group_project/features/russain/data/models/get_pdfs_model.dart';
 
 import '../../features/karkastan/data/models/karkastan_common_question_model.dart';
 import '../../features/karkastan/data/models/karkastan_require_paper_model.dart';
+import '../../features/russain/data/models/get_youtube_videos_model.dart';
 import '../../features/who_we_are/data/models/student_images_model.dart';
 part 'api_service.g.dart';
 
@@ -26,6 +28,18 @@ abstract class ApiService {
 
   @GET(ApiConstants.karkastanCommonQuestion) // the endpoint
   Future<List<KarkastanCommonQuestionModel>> getCommonQuestion();
+
+  @GET(ApiConstants.russainUniversity) // the endpoint
+  Future<List<PdfsModel>> getRussainUniversityPdf();
+
+  @GET(ApiConstants.technicalUniversity) // the endpoint
+  Future<List<PdfsModel>> getTechnicalUniversityPdf();
+
+  @GET(ApiConstants.russainUniversityIraq) // the endpoint
+  Future<List<PdfsModel>> getRussainUniversityIraqPdf();
+
+  @GET(ApiConstants.russainYoutubeVideos) // the endpoint
+  Future<List<YoutubeVideosModel>> getRussainYoutubeLinks();
   
   // @GET(ApiConstants.category) // the endpoint
   // Future<AnimeCategory> getAllCategory();
