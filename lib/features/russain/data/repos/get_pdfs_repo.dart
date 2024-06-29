@@ -61,4 +61,43 @@ class GetPdfsRepo {
       return left(ServerFailure(e.toString()));
     }
   }
+  Future<Either<Failure,List<PdfsModel>>> getlearningBegainerPdf() async {
+    try {
+      var response = await apiService.getLearningBegainerPdf();
+     
+
+      return right(response);
+    } on Exception catch (e) {
+      if (e is DioException) {
+        return left(ServerFailure.fromDioException(e));
+      }
+      return left(ServerFailure(e.toString()));
+    }
+  }
+  Future<Either<Failure,List<PdfsModel>>> getLearningMediumPdf() async {
+    try {
+      var response = await apiService.getLearningMediumPdf();
+     
+
+      return right(response);
+    } on Exception catch (e) {
+      if (e is DioException) {
+        return left(ServerFailure.fromDioException(e));
+      }
+      return left(ServerFailure(e.toString()));
+    }
+  }
+  Future<Either<Failure,List<PdfsModel>>> getLearningAdvancedPdf() async {
+    try {
+      var response = await apiService.getLearningAdvancedPdf();
+     
+
+      return right(response);
+    } on Exception catch (e) {
+      if (e is DioException) {
+        return left(ServerFailure.fromDioException(e));
+      }
+      return left(ServerFailure(e.toString()));
+    }
+  }
 }

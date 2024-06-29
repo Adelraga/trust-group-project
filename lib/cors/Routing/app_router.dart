@@ -13,9 +13,13 @@ import '../../features/karkastan/logic/common_question_cubit/get_common_question
 import '../../features/karkastan/logic/karkastan_universities_prices_cubit/karkastan_universities_prices_cubit.dart';
 import '../../features/karkastan/logic/show_karkastan_require_paper_cubit/show_karkastan_require_paper_cubit.dart';
 import '../../features/karkastan/presentation/view/karkastan_view.dart';
+import '../../features/learn_with_us/logic/advanced_cubit/learning_advanced_cubit.dart';
+import '../../features/learn_with_us/logic/begianer_cubit/learning_begainer_cubit.dart';
+import '../../features/learn_with_us/logic/meduim_cubit/learning_medium_cubit.dart';
 import '../../features/learn_with_us/presentation/view/learn_with_us_view.dart';
 import '../../features/on_boarging/on_boarding.dart';
 import '../../features/our-services/presentation/view/our_services_view.dart';
+import '../../features/rating/logic/comment_cubit/comments_cubit.dart';
 import '../../features/rating/presentation/view/rating_view.dart';
 import '../../features/russain/logic/russain_cubit/get_russain_pdfs_cubit.dart';
 import '../../features/russain/logic/russain_iraq_cubit/russain_iraq_pdf_cubit.dart';
@@ -69,8 +73,8 @@ abstract class AppRouter {
                 getIt<GetCommonQuestionCubit>()..getCommonQuestion(),
           ),
           BlocProvider<KarkastanUniversitiesPricesCubit>(
-            create: (context) =>
-                getIt<KarkastanUniversitiesPricesCubit>()..getkarkastanUniversitiesPrices(),
+            create: (context) => getIt<KarkastanUniversitiesPricesCubit>()
+              ..getkarkastanUniversitiesPrices(),
           ),
           // Add other Blocs here if needed
         ],
@@ -103,11 +107,30 @@ abstract class AppRouter {
     ),
     GoRoute(
       path: Routes.LearnWithUsView,
-      builder: (context, state) => LearnWithUsView(),
+      builder: (context, state) => MultiBlocProvider(
+        providers: [
+          BlocProvider(
+            create: (context) =>
+                getIt<LearningBegainerCubit>()..getLearningBegainerPdf(),
+          ),
+          BlocProvider(
+            create: (context) =>
+                getIt<LearningMediumCubit>()..getLearningMediumPdf(),
+          ),
+          BlocProvider(
+            create: (context) =>
+                getIt<LearningAdvancedCubit>()..getLearningAdvancedPdf(),
+          ),
+        ],
+        child: LearnWithUsView(),
+      ),
     ),
     GoRoute(
       path: Routes.RatingView,
-      builder: (context, state) => RatingView(),
+      builder: (context, state) => BlocProvider(
+        create: (context) =>  getIt<CommentsCubit>(),
+        child: RatingView(),
+      ),
     ),
     // GoRoute(
     //   path: Routes.characterDetails,

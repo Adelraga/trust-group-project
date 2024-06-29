@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:trust_group_project/cors/Themeing/colors.dart';
 import 'package:trust_group_project/cors/Widgets/CustomButton.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:trust_group_project/features/rating/logic/comment_cubit/comments_cubit.dart';
 
 import '../../../../cors/Helpers/spacing.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'rating_text_input.dart';
 
@@ -25,6 +27,7 @@ class RatingViewBody extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8.0),
               ),
               child: TextField(
+                controller: context.read<CommentsCubit>().commentsController,
                 textDirection: TextDirection.rtl, // Ensuring RTL text direction
                 decoration: InputDecoration(
                   hintText: 'اكتب المزيد من المعلومات التي  تريد معرفتها',
@@ -41,7 +44,10 @@ class RatingViewBody extends StatelessWidget {
               title: "Submit",
               textColor: Colors.white,
               buttonColor: ColorsManager.primaryColor,
-              onPressed: () {},
+              onPressed: () {
+                context.read<CommentsCubit>().createComments();
+                
+              },
               height: 60.h,
               width: 200.w,
             )
