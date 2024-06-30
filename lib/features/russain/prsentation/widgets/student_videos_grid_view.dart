@@ -23,7 +23,7 @@ class StudentVideosGridView extends StatelessWidget {
                 videoUrl: state.youtubeVideosList[index].youtubeLink ?? "",
               );
             },
-            childCount: 5,
+            childCount: state.youtubeVideosList.length,
           ),
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,

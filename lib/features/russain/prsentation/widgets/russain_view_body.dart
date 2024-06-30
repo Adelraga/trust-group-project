@@ -69,20 +69,20 @@ class RussainViewBody extends StatelessWidget {
                 title: " معلومات اضافيه عن التخصصات ؟"),
           ),
         ),
-        SliverToBoxAdapter(
+              SliverToBoxAdapter(
           child: SizedBox(
             height: 80,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: BlocBuilder<TechnicalPdfCubit, TechnicalPdfState>(
                 builder: (context, state) {
-                  if (state is GetRussainPdfsLoading) {
+                  if (state is TechnicalPdfLoading) {
                     return Shimmer.fromColors(
                       baseColor: Colors.grey[300]!,
                       highlightColor: Colors.grey[100]!,
                       child: Container(
                         width: double.infinity,
-                        height: 30.0,
+                        height: 50.0,
                         color: Colors.white,
                       ),
                     );
@@ -98,7 +98,7 @@ class RussainViewBody extends StatelessWidget {
                   } else if (state is TechnicalPdfFailure) {
                     return Text(state.errMessage);
                   }
-                  return const Text("No files available.");
+                  return const SizedBox();
                 },
               ),
             ),
