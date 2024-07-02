@@ -16,7 +16,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
   late AnimationController controller;
   late Animation<double> animation;
 
-  initState() {
+  @override
+  void initState() {
     super.initState();
     controller =
         AnimationController(duration: const Duration(seconds: 3), vsync: this);
@@ -24,14 +25,13 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
     controller.forward();
     Future.delayed(const Duration(seconds: 5), () {
-      GoRouter.of(context).push(Routes.onBoardingScreen);
+      GoRouter.of(context).go(Routes.onBoardingScreen);  // Use 'go' instead of 'push'
     });
   }
 
   @override
   void dispose() {
     super.dispose();
-
     controller.dispose();
   }
 
@@ -58,7 +58,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
                   ),
                 ),
               ],
-              // Adjust the height as needed
             ),
           ),
         ],
@@ -66,5 +65,3 @@ class _SplashViewBodyState extends State<SplashViewBody>
     );
   }
 }
-
-void navigateToHome() {}
