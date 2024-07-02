@@ -22,7 +22,7 @@ class ImageGridView extends StatelessWidget {
                 imagesUrl: state.studentImages[index].url ?? "",
               );
             },
-            childCount: 10,
+            childCount: state.studentImages.length,
           ),
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 4,

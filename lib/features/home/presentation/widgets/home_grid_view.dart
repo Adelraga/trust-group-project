@@ -2,9 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import '../../../../cors/Routing/routes.dart';
+import '../../../../cors/animation/fade_animation.dart';
 import 'home_grid_item.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:flutter/material.dart';
+import 'package:simple_animations/simple_animations.dart';
+
+
 
 class HomeGridView extends StatelessWidget {
   const HomeGridView({super.key});
@@ -24,54 +29,72 @@ class HomeGridView extends StatelessWidget {
             onTap: () {
               GoRouter.of(context).push(Routes.OurServicesView);
             },
-            child: HomeGridItem(
-              imagePath: "assets/images/خدماتنا.png",
-              label: 'خدماتنا',
-            ),
+            child: FadeAnimation(
+              delay: 1,
+              child: HomeGridItem(
+                imagePath: "assets/images/خدماتنا.png",
+                label: 'خدماتنا',
+              ),
+            )
           ),
           GestureDetector(
             onTap: () {
               GoRouter.of(context).push(Routes.WhoWeAreView);
             },
-            child: HomeGridItem(
-              imagePath: "assets/images/من نحن.png",
-              label: 'من نحن',
+            child: FadeAnimation(
+              delay: 1.2,
+              child: HomeGridItem(
+                imagePath: "assets/images/من نحن.png",
+                label: 'من نحن',
+              ),
             ),
           ),
           GestureDetector(
             onTap: () {
               GoRouter.of(context).push(Routes.RussainView);
             },
-            child: HomeGridItem(
-              imagePath: "assets/images/الدراسة في روسيا.png",
-              label: 'الدراسة في روسيا',
+            child: FadeAnimation(
+              delay: 1.3,
+              child: HomeGridItem(
+                imagePath: "assets/images/الدراسة في روسيا.png",
+                label: 'الدراسة في روسيا',
+              ),
             ),
           ),
           GestureDetector(
             onTap: () {
               GoRouter.of(context).push(Routes.KarkastanView);
             },
-            child: HomeGridItem(
-              imagePath: "assets/images/الدراسة ف قرغيزستان.png",
-              label: 'الدراسة في قيرغيزستان',
+            child: FadeAnimation(
+              delay: 1.4,
+              child: HomeGridItem(
+                imagePath: "assets/images/الدراسة ف قرغيزستان.png",
+                label: 'الدراسة في قيرغيزستان',
+              ),
             ),
           ),
           GestureDetector(
             onTap: () {
               GoRouter.of(context).push(Routes.RatingView);
             },
-            child: HomeGridItem(
-              imagePath: "assets/images/تقييم.png",
-              label: 'تقييم',
+            child: FadeAnimation(
+              delay: 1.5,
+              child: HomeGridItem(
+                imagePath: "assets/images/تقييم.png",
+                label: 'تقييم',
+              ),
             ),
           ),
           GestureDetector(
             onTap: () {
               GoRouter.of(context).push(Routes.LearnWithUsView);
             },
-            child: HomeGridItem(
-              imagePath: "assets/images/تعلم معنا.png",
-              label: 'تعلم معنا',
+            child: FadeAnimation(
+              delay: 1.6,
+              child: HomeGridItem(
+                imagePath: "assets/images/تعلم معنا.png",
+                label: 'تعلم معنا',
+              ),
             ),
           ),
         ],
@@ -79,3 +102,4 @@ class HomeGridView extends StatelessWidget {
     );
   }
 }
+
