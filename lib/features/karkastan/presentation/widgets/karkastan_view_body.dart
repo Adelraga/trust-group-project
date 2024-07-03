@@ -95,7 +95,7 @@ class KarkastanViewBody extends StatelessWidget {
           ),
           const SliverToBoxAdapter(
             child: TitleWithDescriptionSection(
-                title: " شكل نوذج الفيزا الالكترونية لدولة قرغيزستان "),
+                title: " شكل نموذج الفيزا الالكترونية لدولة قرغيزستان "),
           ),
           const SliverToBoxAdapter(
             child: KarkastanFisa(),
@@ -105,7 +105,7 @@ class KarkastanViewBody extends StatelessWidget {
           ),
           const SliverToBoxAdapter(
             child: TitleWithDescriptionSection(
-                title: "الاسئله الاكثر شيوعا عن الدراسه في دوله قرغيزستتان? "),
+                title: "الاسئله الاكثر شيوعا عن الدراسه في دوله قرغيزستان? "),
           ),
           SliverPadding(
             padding: const EdgeInsets.all(15),
